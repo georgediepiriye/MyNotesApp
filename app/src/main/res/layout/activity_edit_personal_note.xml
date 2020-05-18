@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditPersonalNote"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <EditText
+        android:id="@+id/title_text_view"
+        android:background="@drawable/edit_text_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:hint="Title"
+        android:padding="8dp"/>
+
+    <EditText
+        android:id="@+id/written_notes_text_view"
+        android:gravity="top"
+        android:background="@drawable/edit_text_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Note"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="8dp"/>
+
+</LinearLayout>
