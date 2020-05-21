@@ -9,30 +9,35 @@ import androidx.lifecycle.ViewModel;
 
 import java.util.List;
 
-public class NoteViewModel extends ViewModel {
+public class NoteViewModel extends AndroidViewModel {
     private NoteRepository repository;
     private LiveData<List<Note>> allNotes;
 
+    //Constructor for View model
     public NoteViewModel(@NonNull Application application) {
-        super();
+        super(application);
         repository = new NoteRepository(application);
         allNotes = repository.getAllNotes();
     }
 
-    public  void  insert (Note note){
+
+    public void insert(Note note) {
         repository.insert(note);
     }
-    public  void update(Note note){
+
+    public void update(Note note) {
         repository.update(note);
     }
 
-    public  void delete(Note note){
+    public void delete(Note note) {
         repository.delete(note);
     }
-    public  void deleteAllNotes(){
+
+    public void deleteAllNotes() {
         repository.deleteAllNotes();
     }
-    public LiveData<List<Note>>getAllNotes(){
+
+    public LiveData<List<Note>> getAllNotes() {
         return allNotes;
     }
 }

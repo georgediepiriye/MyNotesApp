@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyNotesApp</string>
+    <string name="title">Title</string>
+    <string name="note">Note</string>
+    <string name="description">description</string>
+    <string name="_11_05_2020">11/05/2020</string>
 </resources>

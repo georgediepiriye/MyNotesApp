@@ -1,6 +1,4 @@
 package com.example.mynotesapp;
-
-import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -17,13 +15,18 @@ public class Note {
     @ColumnInfo(name = "user_title")
     private String title;
 
-    @ColumnInfo(name = "user_note")
-    private String writtenNote;
+    @ColumnInfo(name = "user_description")
+    private String description;
+
+
+    @ColumnInfo(name = "user_date")
+    private String date;
 
     //Constructor for note  class
-    public Note(String title, String writtenNote) {
+    public Note(String title, String description, String date) {
         this.title = title;
-        this.writtenNote = writtenNote;
+        this.description = description;
+        this.date = date;
     }
 
 
@@ -36,8 +39,12 @@ public class Note {
     }
 
 
-    public String getWrittenNote() {
-        return writtenNote;
+    public String getDescription() {
+        return description;
+    }
+
+    public String getDate() {
+        return date;
     }
 
     public void setId(int id) {
